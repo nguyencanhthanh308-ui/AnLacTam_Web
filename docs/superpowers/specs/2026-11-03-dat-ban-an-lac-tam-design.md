@@ -81,7 +81,9 @@ Không dùng tông đỏ mận + kem (suy từ ảnh khách chụp trên Foody, 
 - Mỗi món có quy tắc lặp theo thứ trong tuần (mặc định đủ 7 ngày).
 - Trạng thái hiển thị của một món vào một ngày = quy tắc tuần, **bị ghi đè** bởi lựa chọn bật/tắt riêng của ngày đó (nếu có).
 - Khách xem "hôm nay" theo giờ Việt Nam (UTC+7). Món dành cho buổi nào (sáng, trưa/tối) thể hiện bằng nhóm món, không tự ẩn theo giờ.
-- Quán đóng cửa ngày nào (nghỉ lễ): chủ quán tắt hết hoặc đánh dấu "Hôm nay quán nghỉ" — *chi tiết để người làm đề xuất*.
+- **Menu là một danh mục chung cho cả quán** (người dùng chốt: hai chi nhánh bán cùng một menu). Công tắc bật/tắt món trong ngày áp dụng cho cả quán.
+- Hai chi nhánh chỉ khác nhau ở **nhóm món/buổi bán trong ngày** (người dùng nói "khác nhóm bán trong ngày"; *cách hiểu của người viết, cần người dùng xác nhận*): mỗi chi nhánh có cấu hình riêng gồm nhóm món nào đang bán và khung giờ nào. Khách chọn chi nhánh khi đặt bàn thì thấy đúng nhóm món của chi nhánh đó; trang chủ mặc định hiện menu chung.
+- Ngày nghỉ (lễ, sửa chữa) tính **riêng từng chi nhánh**: một cờ "nghỉ" theo ngày và chi nhánh. Ngày nghỉ thì form đặt bàn chặn ngày đó cho chi nhánh đó.
 
 ## 9. Thông báo đơn mới
 
@@ -115,3 +117,16 @@ Không dùng tông đỏ mận + kem (suy từ ảnh khách chụp trên Foody, 
 - Số người tối đa mỗi đơn, có giới hạn đặt trước bao nhiêu ngày không.
 - Chủ quán cung cấp ảnh món và logo bản gốc.
 - Ai tạo và giữ tài khoản Gmail dùng để gửi thông báo.
+
+## 14. Quyết định của người viết (chưa được người dùng xác nhận từng điều)
+
+Các điều dưới đây do người viết tự quyết sau khi người đọc độc lập chỉ ra chỗ phải đoán; người dùng cần xem lại.
+
+- **Hosting:** Cloudflare Pages (trang tĩnh) kết hợp Supabase. Nếu cần một lớp server nhỏ thì dùng Cloudflare Workers. Biến môi trường bí mật đặt ở phía server, không ở trình duyệt.
+- **Gửi Gmail:** người gửi là một tài khoản Gmail của quán. Người làm cần kiểm tra xem môi trường Supabase miễn phí có cho gửi qua SMTP không (nghi ngờ cổng SMTP bị chặn). Nếu bị chặn thì dùng Gmail API qua HTTPS (OAuth) hoặc cầu nối khác, nhưng người gửi vẫn là Gmail của quán. Nếu không dùng được Gmail thì chọn dịch vụ gửi email có gói miễn phí và báo lại người dùng trước khi đổi.
+- **Không bỏ sót đơn:** trang quản lý tự làm mới khoảng 30 giây, có số đơn chờ trên tiêu đề tab, và đơn chờ quá 15 phút đổi sang màu cảnh báo. Không bắt buộc âm báo ở bản đầu.
+- **Thông số đặt bàn (lưu trong bảng cấu hình, chủ quán sửa được trên một màn hình cài đặt đơn giản):** bước giờ 30 phút; giờ đặt cuối cùng cách giờ đóng cửa 1 giờ; đặt cùng ngày được nếu trước giờ đến ít nhất 1 giờ; đặt trước tối đa 14 ngày; tối đa 10 người mỗi đơn (nhiều hơn thì gọi quán). Giờ mở cửa mỗi chi nhánh nằm trong cùng bảng cấu hình, có thể nhiều ca trong ngày.
+- **Tài khoản nhân viên:** không cho tự đăng ký. Chủ quán tạo hoặc mời nhân viên bằng email; chủ quán có một màn hình quản lý tài khoản đơn giản (thêm, khoá). Hai vai trò như mục 7.
+- **Khách không tự huỷ hoặc sửa đơn:** muốn đổi thì gọi quán. Không cần mã đơn riêng cho khách. Nhân viên đặt trạng thái huỷ.
+- **Thông báo cho khách:** không gửi email hay SMS tự động cho khách ở bản đầu; quán gọi hoặc nhắn lại bằng tay như đã chốt. Form không cần ô email của khách.
+- **Dữ liệu ban đầu:** người làm nhập menu mẫu dựa trên thực đơn in của chi nhánh Phan Đăng Lưu (nhóm Sáng, Trưa/tối, Hấp luộc, Kho xào, Gỏi, Lẩu, Canh, Chiên, Đặc biệt) kèm giá, đánh dấu là "tạm". Chủ quán kiểm tra và sửa trước khi mở cho khách.
