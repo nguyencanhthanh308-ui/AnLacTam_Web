@@ -1,0 +1,89 @@
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  .alt{--vang:#F7BF4F;--vang-dam:#EFA114;--nau:#6A0D05;--xanh:#4E9625;--xanh-dam:#1B6838;--sen:#9CC0DB;--giay:#FBD27A;
+    font-family:'Be Vietnam Pro',sans-serif;color:var(--nau);background:var(--vang);
+    background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1.5px);background-size:6px 6px}
+  .alt .logo{font-family:'Anton',sans-serif;line-height:.92;letter-spacing:1px;color:var(--nau)}
+  .alt .script{font-family:'Dancing Script',cursive;font-weight:700}
+  .alt .brush{display:inline-block;background:var(--xanh);color:var(--giay);padding:2px 22px 4px 14px;font-family:'Dancing Script',cursive;font-size:19px;font-weight:700;transform:skewX(-8deg) rotate(-2deg);border-radius:3px 12px 3px 14px}
+  .alt .box{border:1.5px dashed var(--nau);border-radius:16px;padding:12px 10px 8px;margin:8px 0 14px}
+  .alt .dish{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px dashed rgba(106,13,5,.35)}
+  .alt .dish:last-child{border:0}
+  .alt .ph{width:54px;height:54px;border-radius:50%;background:radial-gradient(#fff 0 55%,#e9e0cd 56%);border:3px solid var(--xanh-dam);flex:none}
+  .alt .price{font-family:'Anton',sans-serif;font-size:17px;letter-spacing:.5px}
+  .alt .band{height:14px;background:repeating-linear-gradient(135deg,#602E2F 0 6px,#7a3b36 6px 12px)}
+  .alt .btn{background:var(--nau);color:var(--giay);text-align:center;border-radius:12px;padding:12px;font-family:'Dancing Script',cursive;font-size:22px;font-weight:700;box-shadow:0 3px 0 #3b0803}
+  .alt .chip{display:inline-block;border:1.5px solid var(--nau);border-radius:16px;padding:3px 12px;font-size:12px;font-weight:600;margin-right:6px}
+  .alt .chip.on{background:var(--nau);color:var(--giay)}
+  .alt .field{background:#fff7e2;border:1.5px solid var(--nau);border-radius:10px;padding:8px 10px;font-size:13px}
+  .swatch{display:inline-block;width:46px;height:46px;border-radius:8px;border:1px solid rgba(0,0,0,.2);margin-right:6px;vertical-align:top}
+</style>
+
+<h2>Bản mẫu lại, theo bảng màu thật của quán</h2>
+<p class="subtitle">Lấy từ poster "Combo mâm cúng" và bức tường logo bạn gửi: nền vàng nghệ, chữ nâu đỏ đậm, nét cọ xanh lá, viền nét đứt, dải họa tiết nâu ở đáy.</p>
+
+<div style="margin:6px 0 14px">
+  <span class="swatch" style="background:#F7BF4F"></span>
+  <span class="swatch" style="background:#EFA114"></span>
+  <span class="swatch" style="background:#6A0D05"></span>
+  <span class="swatch" style="background:#4E9625"></span>
+  <span class="swatch" style="background:#1B6838"></span>
+  <span class="swatch" style="background:#9CC0DB"></span>
+  <span class="swatch" style="background:#602E2F"></span>
+  <div style="font-size:12px;margin-top:4px">Vàng nghệ #F7BF4F · Vàng đậm #EFA114 · Nâu đỏ #6A0D05 · Xanh nét cọ #4E9625 · Xanh lá sen #1B6838 · Xanh hoa sen #9CC0DB · Nâu họa tiết #602E2F</div>
+</div>
+
+<div class="split">
+
+<div class="mockup" data-choice="a" onclick="toggleSelect(this)">
+  <div class="mockup-header">A. Menu hôm nay lên đầu, nút đặt bàn luôn nổi</div>
+  <div class="mockup-body alt" style="padding:0">
+    <div style="padding:16px 16px 6px;display:flex;justify-content:space-between;align-items:flex-end">
+      <div class="logo" style="font-size:20px">AN LẠC<br><span style="font-size:36px">TÂM</span></div>
+      <div style="text-align:right;font-size:11px;font-weight:600">Quán chay · Đà Nẵng<br>6:30–14:00 · 16:00–20:00</div>
+    </div>
+    <div style="padding:0 16px 8px">
+      <div class="script" style="font-size:22px;margin:4px 0">Thực đơn hôm nay · Thứ Ba</div>
+      <div style="margin:6px 0 10px"><span class="chip on">Sáng</span><span class="chip">Trưa, tối</span><span class="chip">Gỏi</span><span class="chip">Lẩu</span></div>
+      <div class="brush">Sáng</div>
+      <div class="box">
+        <div class="dish"><div class="ph"></div><div style="flex:1"><b>Bún Huế</b><div style="font-size:11px;opacity:.8">Nước dùng cay nhẹ, đậu hũ, chả chay</div></div><div class="price">20K</div></div>
+        <div class="dish"><div class="ph"></div><div style="flex:1"><b>Bánh hỏi chả lá lốt</b><div style="font-size:11px;opacity:.8">Ăn kèm rau sống và nước chấm chay</div></div><div class="price">25K</div></div>
+        <div class="dish" style="opacity:.5"><div class="ph"></div><div style="flex:1"><b>Khoai môn An Lạc</b><div style="font-size:11px">Hôm nay hết món</div></div><div class="price">40K</div></div>
+      </div>
+    </div>
+    <div style="padding:6px 16px 12px"><div class="btn">Đặt bàn</div></div>
+    <div class="band"></div>
+  </div>
+</div>
+
+<div class="mockup" data-choice="b" onclick="toggleSelect(this)">
+  <div class="mockup-header">B. Đặt bàn lên đầu, menu nằm bên dưới</div>
+  <div class="mockup-body alt" style="padding:0">
+    <div style="padding:16px 16px 6px">
+      <div class="logo" style="font-size:20px">AN LẠC <span style="font-size:36px">TÂM</span></div>
+      <div class="script" style="font-size:18px">Gọn lễ nghi, tròn tâm ý.</div>
+    </div>
+    <div style="padding:6px 16px">
+      <div class="brush">Đặt bàn</div>
+      <div class="box" style="margin-top:10px">
+        <div style="font-size:11px;font-weight:600;margin-bottom:3px">Chi nhánh</div>
+        <div class="field">117 Phan Đăng Lưu</div>
+        <div style="display:flex;gap:6px;margin:8px 0">
+          <div class="field" style="flex:1">Hôm nay</div><div class="field" style="flex:1">11:30</div><div class="field" style="flex:1">4 người</div>
+        </div>
+        <div class="btn" style="font-size:20px">Tiếp tục</div>
+      </div>
+      <div class="brush" style="margin-top:4px">Thực đơn hôm nay</div>
+      <div class="box">
+        <div class="dish"><div class="ph"></div><div style="flex:1"><b>Bún Huế</b></div><div class="price">20K</div></div>
+        <div class="dish"><div class="ph"></div><div style="flex:1"><b>Cơm thố</b></div><div class="price">25K</div></div>
+      </div>
+    </div>
+    <div class="band"></div>
+  </div>
+</div>
+
+</div>
+
+<p class="subtitle" style="margin-top:16px">Khung chữ, nét cọ xanh, viền nét đứt và dải họa tiết ở đáy mô phỏng poster của quán. Ảnh món trong bản thật sẽ là ảnh cắt nền đặt trên lá chuối như trong poster, ở đây chỉ để ô tròn giữ chỗ.</p>
